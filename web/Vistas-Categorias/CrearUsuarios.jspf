@@ -1,0 +1,36 @@
+<%  String con=String.valueOf(session.getAttribute("Contraseña"));
+    if(con=="null"){
+       con=""; 
+    }
+    String[] nameP = {"id", "nombre", "apellido", "usuario", "correo", "tipo", "estado"};
+    String[] valuesP = new String[nameP.length];
+
+    for (int i = 0; i < nameP.length; i++) {
+        valuesP[i] = request.getParameter(nameP[i]);
+    }
+    String[] bancoPreguntas = new String[3];
+    bancoPreguntas[0] = "";
+    bancoPreguntas[1] = "";
+    bancoPreguntas[2] = "";
+
+    String boton = "<br><button class='btn btn-info'>Cambiar Contraseña</button><br><br>";
+    String titulo = "Modificar Usuario";
+
+    String control = "<button id='control'>Control de seguridad</button>";
+
+    int num = (int) Math.round(Math.random() * 1);
+    String direccion = "/Usuarios?opcion=editar";
+    if (Integer.parseInt(request.getParameter("id")) == 0) {
+
+        boton = "<label for='con'>Contraseña</label><br><input type='password' name='con' id='con' class='input text-center'><br>";
+        bancoPreguntas[0] ="<br><label for='mascota' id='p'>¿Cual es el nombre de tu mascota actual?</label><br>"
+                + "<input type='text' id='mascota' class='input text-center' name='respuesta' /><br>";
+
+        bancoPreguntas[1] = "<br><label for='tel' id='p'>¿Cual es tu número de telefono?</label><br>"
+                + "<input type='tel' name='respuesta' id='tel'/><br>";
+
+        direccion = "/Usuarios?opcion";
+        titulo = "Registrar Usuario";
+    }
+
+%>
