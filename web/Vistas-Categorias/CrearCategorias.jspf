@@ -1,0 +1,13 @@
+<%
+    String[] parametros = {"id", "nombre", "estado"};
+    String[] values = new String[parametros.length];
+    for (int i = 0; i < parametros.length; i++) {
+        values[i] = request.getParameter(parametros[i]);
+    }
+    String direccion =request.getContextPath()+"/categorias?opcion=editar";
+    if (Integer.parseInt(values[0]) == 0) {
+        direccion = request.getContextPath()+"/categorias?opcion";
+
+    }
+    
+%>
