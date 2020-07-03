@@ -1,6 +1,0 @@
-<%
-if(session.getAttribute("Usuario")!= null){
-    response.sendRedirect("Inicio.jsp");
-}
-
-%>
