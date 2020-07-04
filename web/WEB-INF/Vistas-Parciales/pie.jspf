@@ -1,0 +1,9 @@
+<%@ page pageEncoding="UTF-8" %>
+
+<!-- Aquí se deben cerrar los div abiertos en encabezado.jspf -->
+
+    </div>
+    <footer class="pie" id="pie">
+        @SIS 22-B
+    </footer>
+</div>

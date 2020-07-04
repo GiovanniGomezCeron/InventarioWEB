@@ -1,0 +1,16 @@
+<%@ page pageEncoding="UTF-8" %>
+<div>
+   <nav class="encabezado bg-nav container-fluid p-2">
+        <!-- Los href aca apuntan a los servlets creados dentro del controlador -->
+        <a href="<%=request.getContextPath()%>/Inicio.jsp" title="Inicio"><img src="<%=request.getContextPath()%>/imagenes/house-icon_34406.png" class="icons2"/></a>
+        <!--<a href="categorias" class="btn btn-primary btn-sm" role="button">Categorias</a>-->
+        <a href="<%=request.getContextPath()%>/categorias?opcion=listar" title="Categorias"><img src="<%=request.getContextPath()%>/imagenes/iconfinder-check-listnotepadseo-and-webcheck-marklistinglistedoffice-materialschool-material-4394750_119517(1).svg" class="icons2"/></a>
+        <a href="<%=request.getContextPath()%>/Usuarios?opcion=listar" title="Usuarios"><img src="<%=request.getContextPath()%>/imagenes/community_users_12977.png" class="icons2"/></a>
+        <a href="<%=request.getContextPath()%>/Productos?opcion=listar" title="Productos"><img src="<%=request.getContextPath()%>/imagenes/box_full_products_14639.png" class="icons2"/></a>
+        <a href="<%=request.getContextPath()%>/GenerarPDF.jsp" title="Generar PDF"><img src="<%=request.getContextPath()%>/imagenes/pdf.svg" class="icons2"/></a>
+        <a href="<%=request.getContextPath()%>/acercade.jsp" title="Acerca de"><img src="<%=request.getContextPath()%>/imagenes/about_3697.png" class="icons2"/></a>
+        <a href="<%=request.getContextPath()%>/Usuarios?opcion=salir" title="Cerrar Sesión"><img src="<%=request.getContextPath()%>/imagenes/exit.png" class="icons2"/></a>
+    </nav>
+    
+    <div class="contenido">
+   <!--Este div no se cierra aquí, se cierra en el pie.jspf -->
